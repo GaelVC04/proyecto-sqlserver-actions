@@ -1,7 +1,7 @@
 USE EmpresaDB;
 GO
 
-CREATE TABLE Ventas (
+CREATE TABLE Ventas(
     VentaID INT IDENTITY(1,1) PRIMARY KEY,
     Producto VARCHAR(100),
     Cantidad INT,
@@ -9,7 +9,7 @@ CREATE TABLE Ventas (
 );
 GO
 
-CREATE TABLE AuditoriaVentas (
+CREATE TABLE AuditoriaVentas(
     AuditoriaID INT IDENTITY(1,1) PRIMARY KEY,
     VentaID INT,
     FechaRegistro DATETIME DEFAULT GETDATE(),
@@ -17,7 +17,7 @@ CREATE TABLE AuditoriaVentas (
 );
 GO
 
-CREATE TABLE Inventario (
+CREATE TABLE Inventario(
     Producto VARCHAR(100) PRIMARY KEY,
     Existencias INT NOT NULL
 );
